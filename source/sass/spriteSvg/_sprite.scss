@@ -1,0 +1,46 @@
+@mixin svg-common {
+    background: url("../images/spriteSvg/sprite.svg") no-repeat;
+}
+
+.svg-icon-arrow1 {
+    @include svg-common;
+    background-position: 0 0;
+    width: 28px;
+    height: 23.1px;
+}
+
+.svg-icon-arrow2 {
+    @include svg-common;
+    background-position: 15.30891197375615% 13.340744858254585%;
+    width: 20.1px;
+    height: 29.1px;
+}
+
+.svg-icon-close {
+    @include svg-common;
+    background-position: 27.825099375354913% 29.654036243822077%;
+    width: 26.9px;
+    height: 26.9px;
+}
+
+.svg-icon-grid {
+    @include svg-common;
+    background-position: 44.97041420118343% 46.285714285714285%;
+    width: 34px;
+    height: 34px;
+}
+
+.svg-logo_ux-republic {
+    @include svg-common;
+    background-position: 91.66666666666667% 92%;
+    width: 83px;
+    height: 84px;
+}
+
+.svg-sprite {
+    @include svg-common;
+    background-position: 100% 100%;
+    width: 10px;
+    height: 10px;
+}
+

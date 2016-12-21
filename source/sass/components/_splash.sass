@@ -1,0 +1,100 @@
+.c-splash
+  z-index: 500000
+  position: absolute
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  opacity: 0
+  background-image: url(../images/splash.jpg)
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  background-color: #1e1e22
+  transition: opacity .6s cubic-bezier(.4,0,0.2,1)
+  &::before,
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+  &::before
+    background-color: #2c4063
+    opacity: .35
+  &::after
+    background: linear-gradient(to bottom,transparent 0,#1e1e22 100%)
+    opacity: .5
+  &.splash-loaded
+    opacity: 1
+  &__content
+    position: absolute
+    z-index: 1
+    left: 10vw
+    bottom: 20vh
+    max-width: 80vw
+    .c-icon
+      vertical-align: middle
+    .c-title
+      display: inline-block
+      vertical-align: middle
+      margin-left: 20px
+      color: #fff
+      font-size: 2rem
+      font-family: $font-title
+    .c-text
+      color: #fff
+      line-height: 20px
+      margin-top: 30px
+    .c-splash__link
+      position: relative
+      display: inline-block
+      cursor: pointer
+      p
+        width: 100%
+        display: block
+        border: 1px solid #fff
+        box-sizing: border-box
+        padding: 10px 20px 10px 20px
+        border-radius: 36px
+        transition: all .3s cubic-bezier(.4,0,0.2,1)
+        span
+          display: inline-block
+          transform: translateX(0)
+          transition: transform .3s cubic-bezier(.4,0,0.2,1)
+        &::before
+          content: ''
+          display: block
+          position: absolute
+          right: 14px
+          top: 4px
+          @extend .svg-icon-arrow2
+        &::after
+          content: ''
+          width: 25px
+          height: 1px
+          background-color: white
+          display: inline-block
+          margin-left: 10px
+          vertical-align: middle
+          transform-origin: center left
+          transform: scaleX(1) translateX(0px)
+          transition: transform .3s cubic-bezier(.4,0,0.2,1)
+      &:hover
+        p
+          padding: 10px 40px 10px 20px
+          &::after
+            transform: scaleX(1.6) translateX(4px)
+        span
+          transform: translateX(5px)
+
+@media screen and (max-width: $iphone-six-plus)
+  .c-splash__content
+    .c-icon
+      width: 50px
+
+@media screen and (max-width: $iphone-five)
+  .c-splash__content
+    .c-title
+      font-size: 1.5rem

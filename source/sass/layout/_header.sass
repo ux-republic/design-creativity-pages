@@ -1,0 +1,20 @@
+.l-header
+  height: 10vh
+  width: 100%
+  z-index: 10000
+  opacity: 0
+  transition: opcity .2s cubic-bezier(.4,0,0.2,1)
+
+.is-loaded
+  .l-header
+    opacity: 1
+
+@media screen and (max-width: $ipad)
+  .l-header
+    position: absolute
+    left: 0
+    top: 0
+
+@media screen and (max-width: $iphone-six-plus)
+  .l-header
+    height: auto
